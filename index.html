@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="cristobal">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I.E. CRISTOBAL COLÓN </title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="js/controller.js"></script>
+
+  <script src="js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+
+<header class="menu-cont">
+  <div class="menu">
+    <div class="escudo desde-arriba"></div>
+    <h4 class="desde-arriba">Desde 1994</h4>
+  </div>
+</header>
+
+<nav>
+    <ul ng-controller="menu">
+      <li ng-repeat="item in menu_items">
+        <a href="{{item.link}}">
+          {{item.item}}
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div ng-controller="carousel" class="carousel">
+    <div ng-repeat="block in blocks | orderBy: '-created_at'" class="desc">
+      <div class="carousel-desc">
+        <h4>
+          {{block.title}}
+        </h4>
+        <p>
+          {{block.info}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+<div ng-controller="content" class="container">
+
+
+
+  <div class="info-block">
+    <div class="left">
+      <h4>{{mision.title}}</h4>
+      <div class="info">
+        <p>
+          {{mision.cont}}
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <h4>{{vision.title}}</h4>
+      <div class="info">
+        <p>
+          {{vision.cont}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <h4>{{politica.title}}</h4>
+    <div class="{{politica.class}}">
+      {{politica.cont}}
+    </div>
+  </div>
+
+  <div class="info-block">
+    <h4>
+      Valores Institucionales
+    </h4>
+    <div class="info">
+       <ol>
+          <li ng-repeat="valor in valores">
+            <b>{{valor.valor}}</b>
+            <p>
+              {{valor.descrip}}
+            </p>
+          </li>
+        </ol>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="down">
+      <div class="f-info">
+      <span>
+          Calle 38 Numero 92 - 93 - Santa Monica
+        </span>
+        <span>
+          iecristobalcolon@yahoo.com
+        </span>
+        <span>
+          253-25-17
+        </span>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.049012592876!2d-75.6132803!3d6.250813099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44297893eec893%3A0x66e6234e32f7800d!2sCalle+38+%23+92-93%2C+Medell%C3%ADn%2C+Antioquia%2C+Colombia!5e0!3m2!1ses-419!2s!4v1428029870630" height="400" frameborder="0" style="border:0"></iframe>
+</footer>
+  
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
