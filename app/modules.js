@@ -1,7 +1,7 @@
 (function(){
 	var app = angular.module('cristobal',['ngRoute']);
 
-	app.config(function($routeProvider, $locationProvider){
+	app.config(function($routeProvider/*, $locationProvider*/){
 		$routeProvider
 			.when('/',{
 				templateUrl : 'app/components/home/homeView.html',
@@ -10,7 +10,7 @@
 			.when('/institucion',{
 				templateUrl : 'app/components/institucion/institucionView.html',
 				controller 	: 'institucionController'
-			})
+			})	
 			.when('/comunidad',{
 				templateUrl	: 'app/components/comunidad/comunidadView.html',
 				controller 	: 'comunidadController'
@@ -24,7 +24,7 @@
 				controller 	: 'contactoController'
 			});
 
-		$locationProvider.html5Mode(true);
+		//$locationProvider.html5Mode(false);
 	});
 
 

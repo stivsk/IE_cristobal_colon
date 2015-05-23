@@ -1,22 +1,22 @@
 var menuItems = [
 	{
 		'item':'Inicio',
-		'link':'/',
+		'link':'#/',
 	},
 	{
 		'item':'institución',
-		'link':'/institucion'
+		'link':'#institucion'
 	},
 	{
 		'item':'comunidad',
-		'link':'/comunidad'
+		'link':'#comunidad'
 	},
 	{
 		'item':'galerias',
-		'link':'/galerias'
+		'link':'#galerias'
 	},
 	{
 		'item':'Contáctenos',
-		'link':'/contacto'
+		'link':'#contacto'
 	}
 ];
