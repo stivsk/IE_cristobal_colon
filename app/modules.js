@@ -22,7 +22,10 @@
 			.when('/contacto',{
 				templateUrl	: 'app/components/contacto/contactoView.html',
 				controller 	: 'contactoController'
-			});
+			})
+			.otherwise({
+            	redirectTo: '/'
+        	});
 
 		//$locationProvider.html5Mode(false);
 	});

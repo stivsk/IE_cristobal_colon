@@ -188,10 +188,23 @@ footer
 	margin-bottom 30px
 	position relative
 	width auto
-	
-.desde-arriba
-	-moz-animation 2s arriba
-	-webkit-animation 2s arriba
-	animation 2s arriba
-	
 
+// ANIMATIONS //
+	
+.fadeIn
+	animation 1s fadeIn 1
+	
+.fadeInDown
+	animation 2s fadeInDown 1
+	
+.fadeInUp
+	animation 1s fadeInUp 1
+	
+@media all and (max-width: 900px)
+	.info-block
+		.left,
+		.right
+			display block
+			float none
+			margin-top 30px
+			width 100%
