@@ -1,0 +1,51 @@
+<div ng-controller="carouselController as carousel" class="carousel">
+    <div ng-repeat="block in carousel.blocks" class="desc">
+      <div class="carousel-desc">
+        <h4>
+          {{block.title}}
+        </h4>
+        <p>
+          {{block.info}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+<div ng-controller="homeController as home" class="container">
+
+<div class="info-block">
+    <div class="{{mv.class}}" ng-repeat="mv in home.mvs">
+      <h4>{{mv.title}}</h4>
+      <div class="info">
+        <p>
+          {{mv.cont}}
+        </p>
+      </div>
+    </div>
+</div>
+
+
+  <div class="info-block">
+    <h4>{{home.politic.title}}</h4>
+    <div class="{{home.politic.class}}">
+      {{home.politic.cont}}
+    </div>
+  </div>
+
+  <div class="info-block">
+    <h4>
+      Valores institucionales
+    </h4>
+    <div class="info">
+       <ol>
+          <li ng-repeat="value in home.values">
+            <b>{{value.valor}}</b>
+            <p>
+              {{value.descrip}}
+            </p>
+          </li>
+        </ol>
+    </div>
+  </div>
+
+</div>
